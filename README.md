@@ -1,26 +1,26 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a simple ionic-2 application
 
-## How to use this template
+## How to run this project
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+first of all you need to have node and npm on your system installed.
+if you using mac then with the help of HomeBrew you can have them with the following command
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+```bash
+$ brew install node
+```
 
-### With the Ionic CLI:
+above command will also install npm (node package manager)
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+after that you need the ionic and cordova being installed on the system level, following is the command
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
 ```
 
-Then, to run it, cd into `myBlank` and run:
+Now take the pull of this project
+Then, to run it, cd into `quotes-app` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ npm install
+$ ionic serve
 ```
-
-Substitute ios for android if not on a Mac.
-
