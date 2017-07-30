@@ -1,6 +1,11 @@
 <ion-header>
 
   <ion-navbar>
+    <ion-buttons>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Favorite Quotes</ion-title>
   </ion-navbar>
 
@@ -14,7 +19,7 @@
     >
       <ion-item
         (click)="onViewQuote(quote)"
-        color="quoteBackground"
+        [color]="getBackground()"
       >
         <h2>{{quote.person}}</h2>
         <p>{{quote.text}}</p>
