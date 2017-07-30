@@ -27,6 +27,16 @@ export class FavoritesPage {
   onViewQuote(quote: Quote) {
     const modal = this.modelCtrl.create(QuotePage, quote);
     modal.present();
+    modal.onDidDismiss((remove:boolean) => {
+      if (remove) {
+        this.quoteService.removeQuoteFromFavorites(quote);
+        // remove the code from the local view copy of the quotes as well
+        const position = this.quotes.findIndex((quoteEl: Quote) => {
+          return quoteEl.id == quote.id;
+        });
+        this.quotes.splice(position, 1);
+      }
+    });
   }
 
 }
